@@ -1,0 +1,35 @@
+<html>
+    <!-- <script data-main="scripts/main" src="scripts/require.js"></script> -->
+    <!-- <script data-main="scripts/main" src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script> -->
+    <!-- <script data-main="scripts/main"src="https://unpkg.com/web3@latest/dist/web3.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script data-main="scripts/main" src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="main.js"></script>
+    <body>
+        <div class="container">
+            <h1 style="text-align:center;">Welcome to our Web application</h1>
+        </br></br></br></br>
+            <div style="text-align: center;" class="container">
+                <button id='submit' class="btn btn-primary btn-lg" onclick="go_submit()">Submit Records</button> </br></br>
+                <button id='verify' class="btn btn-primary btn-lg" onclick="go_verify()">Verify Records</button> 
+            </div>
+            
+        </div>
+        
+    </body>
+    <script>
+        function go_verify(){
+            location.replace("check.html");
+        }
+        function go_submit(){
+            location.replace("submit.html");
+        }
+        web3=new Web3(web3.currentProvider);
+        eth = web3.eth;
+        personal=web3.eth.personal;        
+    </script>
+    
+</html>
